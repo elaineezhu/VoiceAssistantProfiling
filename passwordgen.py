@@ -4,11 +4,11 @@ import argparse
 import random
 
 def main():
-    parser = argparse.ArgumentParser(description= "Generate a secure, memorable password using the XKCD method")
-    parser.add_argument("-w", "--words", help = "include WORDS words in the password (default=4)", dest = "WORDS", type = int, default = 4)
-    parser.add_argument("-c", "--caps", help = "capitalize the first letter of CAPS random words (default=0)", dest = "CAPS", type = int, default = 0)
-    parser.add_argument("-n", "--numbers", help = "insert NUMBERS random numbers in the password (default=0)", dest = "NUMBERS", type = int, default = 0)
-    parser.add_argument("-s", "--symbols", help = "insert SYMBOLS random symbols in the password (default=0)", dest = "SYMBOLS", type = int, default = 0)
+    parser = argparse.ArgumentParser(description= "Generates a secure password that adheres to Google's password requirements")
+    parser.add_argument("-w", "--words", help = "include WORDS words in the password (default=2)", dest = "WORDS", type = int, default = 2)
+    parser.add_argument("-c", "--caps", help = "capitalize the first letter of CAPS random words (default=2)", dest = "CAPS", type = int, default = 2)
+    parser.add_argument("-n", "--numbers", help = "insert NUMBERS random numbers in the password (default=1)", dest = "NUMBERS", type = int, default = 1)
+    parser.add_argument("-s", "--symbols", help = "insert SYMBOLS random symbols in the password (default=1)", dest = "SYMBOLS", type = int, default = 1)
     args = parser.parse_args()
 
     # reads words and strips, then appends to WORDS list
